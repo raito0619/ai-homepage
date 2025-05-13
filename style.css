@@ -246,3 +246,195 @@ body.cyberpunk-theme {
     text-align: center;
   }
 }
+
+/* カルーセルセクションのスタイル */
+.carousel-section {
+  padding: 2rem 0;
+  background: var(--cyber-bg);
+  position: relative;
+}
+
+.swiper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.carousel-card {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 アスペクト比 */
+  background: var(--cyber-card-bg);
+  border: 2px solid var(--neon-blue);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+.carousel-card video,
+.carousel-card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: var(--neon-pink);
+  text-align: center;
+}
+
+.carousel-caption p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px var(--neon-pink);
+}
+
+/* Swiperのナビゲーションボタンのスタイル */
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--neon-blue);
+  background: rgba(0, 0, 0, 0.5);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--neon-blue);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 1.2rem;
+}
+
+.swiper-pagination-bullet {
+  background: var(--neon-blue);
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: var(--neon-pink);
+}
+
+/* アカウント説明セクションのスタイル */
+.about-section {
+  padding: 4rem 0;
+  background: var(--cyber-bg);
+}
+
+.cyber-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.about-content {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.cyber-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+.cyber-highlight {
+  font-size: 1.4rem;
+  color: var(--neon-pink);
+  text-shadow: 0 0 10px var(--neon-pink);
+  margin: 2rem 0;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.feature-card {
+  background: var(--cyber-card-bg);
+  border: 2px solid var(--neon-blue);
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.feature-card i {
+  font-size: 2.5rem;
+  color: var(--neon-pink);
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.cyber-button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: transparent;
+  border: 2px solid var(--neon-blue);
+  color: var(--neon-blue);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.cyber-button:hover {
+  background: var(--neon-blue);
+  color: var(--cyber-bg);
+  box-shadow: 0 0 20px var(--neon-blue);
+}
+
+.about-footer {
+  text-align: center;
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--neon-blue);
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+  .carousel-caption p {
+    font-size: 1.2rem;
+  }
+
+  .cyber-text {
+    font-size: 1rem;
+  }
+
+  .cyber-highlight {
+    font-size: 1.2rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+}
