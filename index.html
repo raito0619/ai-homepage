@@ -4,52 +4,106 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ボットの日常</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
-  <header>
-    <h1>ボットの日常の中の人の日常</h1>
-    <p>AIで作成した動画と画像をまとめています。</p>
-  </header>
+<body class="cyberpunk-theme">
+  <div class="glitch-container">
+    <header class="cyber-header">
+      <h1 class="glitch-text" data-text="ボットの日常の中の人の日常">ボットの日常の中の人の日常</h1>
+      <p class="cyber-subtitle">AIで作成した動画と画像をまとめています。</p>
+    </header>
+  </div>
 
-  <main class="gallery">
-
+  <main class="cyber-gallery">
     <!-- 動画ギャラリー -->
-    <h2>🎥 AI生成動画</h2>
-    <div class="section">
-      <div class="card">
-        <video autoplay loop muted playsinline>
-          <source src="videos/hallo-robott.mp4" type="video/mp4">
-          この動画はお使いのブラウザで再生できません。
-        </video>
-        <p>あいさつするロボット</p>
+    <section class="gallery-section">
+      <h2 class="section-title"><i class="fas fa-video"></i> AI生成動画</h2>
+      <div class="cyber-grid">
+        <div class="cyber-card">
+          <div class="card-inner">
+            <div class="card-front">
+              <video autoplay loop muted playsinline>
+                <source src="videos/hallo-robott.mp4" type="video/mp4">
+                この動画はお使いのブラウザで再生できません。
+              </video>
+            </div>
+            <div class="card-back">
+              <p>あいさつするロボット</p>
+              <div class="cyber-details">
+                <span class="cyber-tag">AI生成</span>
+                <span class="cyber-tag">ロボット</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cyber-card">
+          <div class="card-inner">
+            <div class="card-front">
+              <video autoplay loop muted playsinline>
+                <source src="videos/taiping-robott.mp4" type="video/mp4">
+                この動画はお使いのブラウザで再生できません。
+              </video>
+            </div>
+            <div class="card-back">
+              <p>タイピングするロボット</p>
+              <div class="cyber-details">
+                <span class="cyber-tag">AI生成</span>
+                <span class="cyber-tag">ロボット</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <video autoplay loop muted playsinline>
-          <source src="videos/taiping-robott.mp4" type="video/mp4">
-          この動画はお使いのブラウザで再生できません。
-        </video>
-        <p>タイピングするロボット</p>
-      </div>
-    </div>
+    </section>
 
     <!-- 静止画像ギャラリー -->
-    <h2>🖼️ AI生成画像</h2>
-    <div class="section">
-      <div class="card">
-        <img src="images/aikon.png" alt="アイコン">
-        <p>アイコン</p>
+    <section class="gallery-section">
+      <h2 class="section-title"><i class="fas fa-image"></i> AI生成画像</h2>
+      <div class="cyber-grid">
+        <div class="cyber-card">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="images/aikon.png" alt="アイコン">
+            </div>
+            <div class="card-back">
+              <p>アイコン</p>
+              <div class="cyber-details">
+                <span class="cyber-tag">AI生成</span>
+                <span class="cyber-tag">アイコン</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cyber-card">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="images/aikon-botu1.png" alt="没アイコン１">
+            </div>
+            <div class="card-back">
+              <p>アイコン没１</p>
+              <div class="cyber-details">
+                <span class="cyber-tag">AI生成</span>
+                <span class="cyber-tag">没案</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <img src="images/aikon-botu1.png" alt="没アイコン１">
-        <p>アイコン没１</p>
-      </div>
-    </div>
-
+    </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 My AI Gallery</p>
+  <footer class="cyber-footer">
+    <div class="footer-content">
+      <p>&copy; 2025 My AI Gallery</p>
+      <div class="cyber-social">
+        <a href="#" class="cyber-link"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="cyber-link"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
   </footer>
 </body>
 </html>
