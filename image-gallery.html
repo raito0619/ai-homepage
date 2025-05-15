@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ボットの日常 - 画像ギャラリー</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .pagination {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 20px 0;
+    }
+    .pagination button {
+      background: var(--cyber-primary);
+      color: var(--cyber-text);
+      border: 1px solid var(--cyber-accent);
+      padding: 8px 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .pagination button:hover {
+      background: var(--cyber-accent);
+    }
+    .pagination button.active {
+      background: var(--cyber-accent);
+    }
+    .pagination button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    .loading {
+      text-align: center;
+      padding: 20px;
+      color: var(--cyber-text);
+    }
+  </style>
+</head>
+<body class="cyberpunk-theme">
+  <div class="glitch-container">
+    <header class="cyber-header">
+      <h1 class="glitch-text" data-text="ボットの日常の中の人の日常">ボットの日常の中の人の日常</h1>
+      <p class="cyber-subtitle">AI生成画像ギャラリー</p>
+      <nav class="cyber-nav">
+        <a href="index.html" class="cyber-button"><i class="fas fa-home"></i> ホーム</a>
+        <a href="gallery.html" class="cyber-button"><i class="fas fa-video"></i> 動画ギャラリー</a>
+      </nav>
+    </header>
+  </div>
+
+  <main class="cyber-gallery">
+    <!-- AI塾生成画像ギャラリー -->
+    <section id="ai-juku-images" class="gallery-section">
+      <h2 class="section-title"><i class="fas fa-chalkboard-teacher"></i> AI塾生成画像</h2>
+      <div class="cyber-grid" id="images-grid">
+        <!-- 画像カードがここに動的に生成されます -->
+      </div>
+      <div class="pagination" id="pagination">
+        <!-- ページネーションボタンがここに生成されます -->
+      </div>
+      <div id="loading" class="loading" style="display: none;">
+        <i class="fas fa-spinner fa-spin"></i> 読み込み中...
+      </div>
+    </section>
+  </main>
+
+  <footer class="cyber-footer">
+    <div class="footer-content">
+      <p>&copy; 2025 ボットの日常</p>
+      <div class="cyber-social">
+        <a href="#" class="cyber-link"><i class="fab fa-tiktok"></i></a>
+        <a href="#" class="cyber-link"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="cyber-link"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // 設定
+    const ITEMS_PER_PAGE = 12; // 1ページあたりの表示数
+    const TOTAL_IMAGES = 63; // 総画像数
+    let currentPage = 1;
+
+    // 画像カードを生成する関数
+    function createImageCard(number) {
+      // i4は.webp、i12は.jpg、それ以外の12以下の番号は.png
+      const extension = number === 4 ? 'webp' : (number === 12 ? 'jpg' : (number <= 12 ? 'png' : 'jpg'));
+      return `
+        <div class="cyber-card">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="AI塾生成画像/i${number}.${extension}" 
+                   alt="画像 ${number}"
+                   loading="lazy"
+                   width="300"
+                   height="300">
+            </div>
+            <div class="card-back">
+              <p>画像 ${number}</p>
+              <div class="cyber-details">
+                <span class="cyber-tag">AI生成</span>
+                <span class="cyber-tag">画像</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    // ページネーションを生成する関数
+    function createPagination() {
+      const totalPages = Math.ceil(TOTAL_IMAGES / ITEMS_PER_PAGE);
+      const pagination = document.getElementById('pagination');
+      pagination.innerHTML = '';
+
+      // 前へボタン
+      const prevButton = document.createElement('button');
+      prevButton.innerHTML = '<i class="fas fa-chevron-left"></i>';
+      prevButton.disabled = currentPage === 1;
+      prevButton.onclick = () => changePage(currentPage - 1);
+      pagination.appendChild(prevButton);
+
+      // ページ番号ボタン
+      for (let i = 1; i <= totalPages; i++) {
+        const button = document.createElement('button');
+        button.textContent = i;
+        button.classList.toggle('active', i === currentPage);
+        button.onclick = () => changePage(i);
+        pagination.appendChild(button);
+      }
+
+      // 次へボタン
+      const nextButton = document.createElement('button');
+      nextButton.innerHTML = '<i class="fas fa-chevron-right"></i>';
+      nextButton.disabled = currentPage === totalPages;
+      nextButton.onclick = () => changePage(currentPage + 1);
+      pagination.appendChild(nextButton);
+    }
+
+    // ページを変更する関数
+    async function changePage(page) {
+      const loading = document.getElementById('loading');
+      const imagesGrid = document.getElementById('images-grid');
+      
+      loading.style.display = 'block';
+      imagesGrid.style.opacity = '0.5';
+      
+      currentPage = page;
+      const start = (page - 1) * ITEMS_PER_PAGE + 1;
+      const end = Math.min(page * ITEMS_PER_PAGE, TOTAL_IMAGES);
+
+      // 少し遅延を入れて、ローディング表示を確実に見せる
+      await new Promise(resolve => setTimeout(resolve, 300));
+
+      imagesGrid.innerHTML = '';
+      for (let i = start; i <= end; i++) {
+        imagesGrid.innerHTML += createImageCard(i);
+      }
+
+      createPagination();
+      
+      loading.style.display = 'none';
+      imagesGrid.style.opacity = '1';
+
+      // ページトップにスクロール
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // 初期表示
+    changePage(1);
+
+    // Intersection Observer for lazy loading
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src;
+            observer.unobserve(img);
+          }
+        });
+      },
+      { rootMargin: '50px 0px' }
+    );
+  </script>
+</body>
+</html> 

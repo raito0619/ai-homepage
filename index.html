@@ -16,6 +16,10 @@
     <header class="cyber-header">
       <h1 class="glitch-text" data-text="ボットの日常">ボットの日常</h1>
       <p class="cyber-subtitle">中の人のホームページへようこそ</p>
+      <nav class="cyber-nav">
+        <a href="gallery.html" class="cyber-button"><i class="fas fa-video"></i> 動画ギャラリー</a>
+        <a href="image-gallery.html" class="cyber-button"><i class="fas fa-images"></i> 画像ギャラリー</a>
+      </nav>
     </header>
   </div>
 
@@ -24,42 +28,59 @@
     <section class="carousel-section">
       <div class="swiper">
         <div class="swiper-wrapper">
-          <!-- 動画と画像がランダムに表示される -->
-          <div class="swiper-slide">
+          <div class="swiper-slide" style="width: 400px;">
             <div class="carousel-card">
               <video autoplay loop muted playsinline>
-                <source src="videos/robot/hallo-robott.mp4" type="video/mp4">
+                <source src="AI塾生成動画/m1.mp4" type="video/mp4">
               </video>
               <div class="carousel-caption">
-                <p>あいさつするロボット</p>
-                <a href="gallery.html#robot" class="cyber-button">ギャラリーを見る</a>
+                <p>AI生成動画サンプル</p>
+                <a href="gallery.html" class="cyber-button">動画ギャラリーへ</a>
               </div>
             </div>
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide" style="width: 400px;">
             <div class="carousel-card">
               <video autoplay loop muted playsinline>
-                <source src="videos/cats/20250512_1119_Space Kitten Adventure_simple_compose_01jv14kxe2eyasp9j5myy0ryzs.mp4" type="video/mp4">
+                <source src="AI塾生成動画/m2.mp4" type="video/mp4">
               </video>
               <div class="carousel-caption">
-                <p>宇宙猫の冒険</p>
-                <a href="gallery.html#cats" class="cyber-button">ギャラリーを見る</a>
+                <p>AI生成動画サンプル2</p>
+                <a href="gallery.html" class="cyber-button">動画ギャラリーへ</a>
               </div>
             </div>
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide" style="width: 400px;">
             <div class="carousel-card">
-              <img src="images/ikon/aikon.png" alt="アイコン">
+              <img src="AI塾生成画像/i1.png" alt="AI生成画像サンプル">
               <div class="carousel-caption">
-                <p>メインアイコン</p>
-                <a href="gallery.html#icons" class="cyber-button">ギャラリーを見る</a>
+                <p>AI生成画像サンプル</p>
+                <a href="image-gallery.html" class="cyber-button">画像ギャラリーへ</a>
+              </div>
+            </div>
+          </div>
+          <!-- 追加のスライド（ループ用） -->
+          <div class="swiper-slide" style="width: 400px;">
+            <div class="carousel-card">
+              <video autoplay loop muted playsinline>
+                <source src="AI塾生成動画/m3.mp4" type="video/mp4">
+              </video>
+              <div class="carousel-caption">
+                <p>AI生成動画サンプル3</p>
+                <a href="gallery.html" class="cyber-button">動画ギャラリーへ</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide" style="width: 400px;">
+            <div class="carousel-card">
+              <img src="AI塾生成画像/i2.png" alt="AI生成画像サンプル2">
+              <div class="carousel-caption">
+                <p>AI生成画像サンプル2</p>
+                <a href="image-gallery.html" class="cyber-button">画像ギャラリーへ</a>
               </div>
             </div>
           </div>
         </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
       </div>
     </section>
 
@@ -70,12 +91,12 @@
         <div class="about-content">
           <p class="cyber-text">
             こんにちは。ボットの中の人です。<br>
-            未来から来たとか言ってるボットの、演出、撮影、編集、あとたまにバグらせる係をやっています。
+            ボットの、演出、、編集、あとたまにバグらせる係をやっています。
           </p>
           <p class="cyber-text">
             本ページでは、TikTokアカウント「ボットの日常」の裏側をこっそり公開。<br>
             あの謎テンションの動画たちは、どこから来て、どこへ行こうとしているのか。<br>
-            そして、なぜ私は自分の休日を"意味のないAIの一日"の再現に費やしているのか。
+            そして、なぜ私は自分の日々をを"AI生成"に費やしているのか。
           </p>
           <p class="cyber-text cyber-highlight">
             …その答えは、私にもわかりません。
@@ -85,23 +106,21 @@
         <div class="features-grid">
           <div class="feature-card">
             <i class="fas fa-video"></i>
-            <h3>「ボットの日常」動画のまとめ視聴</h3>
-            <a href="gallery.html" class="cyber-button">ギャラリーへ</a>
+            <h3>AI生成動画のまとめ視聴</h3>
+            <p>ボットの日常で使用している動画素材集</p>
+            <a href="gallery.html" class="cyber-button">動画ギャラリーへ</a>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-images"></i>
+            <h3>AI生成画像のギャラリー</h3>
+            <p>ボットの日常で使用している画像素材集</p>
+            <a href="image-gallery.html" class="cyber-button">画像ギャラリーへ</a>
           </div>
           <div class="feature-card">
             <i class="fas fa-blog"></i>
             <h3>製作過程や思考回路のログ</h3>
-            <a href="#" class="cyber-button">ブログへ</a>
-          </div>
-          <div class="feature-card">
-            <i class="fas fa-envelope"></i>
-            <h3>コラボ・取材などの連絡窓口</h3>
-            <a href="#" class="cyber-button">お問い合わせ</a>
-          </div>
-          <div class="feature-card">
-            <i class="fas fa-sticky-note"></i>
-            <h3>ボットの精神安定のためのメモ帳</h3>
-            <a href="#" class="cyber-button">メモ帳へ</a>
+            <p>AIとの付き合い方を模索する日々の記録</p>
+            <a href="blog.html" class="cyber-button">ブログへ</a>
           </div>
         </div>
 
@@ -119,32 +138,56 @@
     <div class="footer-content">
       <p>&copy; 2025 ボットの日常</p>
       <div class="cyber-social">
-        <a href="#" class="cyber-link"><i class="fab fa-tiktok"></i></a>
-        <a href="#" class="cyber-link"><i class="fab fa-twitter"></i></a>
-        <a href="#" class="cyber-link"><i class="fab fa-github"></i></a>
+        <a href="https://www.tiktok.com/@botnonichijou?is_from_webapp=1&sender_device=pc" class="cyber-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
       </div>
     </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <style>
+    .swiper {
+      overflow: hidden;
+      position: relative;
+    }
+    .swiper-wrapper {
+      transition-timing-function: linear !important;
+    }
+    .carousel-card {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+    .carousel-card video,
+    .carousel-card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+  </style>
   <script>
     const swiper = new Swiper('.swiper', {
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+      centeredSlides: false,
       loop: true,
+      speed: 8000,
+      allowTouchMove: false,
       autoplay: {
-        delay: 5000,
+        delay: 0,
         disableOnInteraction: false,
       },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
+      on: {
+        init: function () {
+          this.autoplay.start();
+        }
       },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      effect: 'fade',
-      fadeEffect: {
-        crossFade: true
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        }
       }
     });
   </script>
