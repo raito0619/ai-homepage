@@ -10,11 +10,16 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
   <style>
+    .blog-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
     .blog-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
       gap: 2rem;
-      padding: 2rem;
     }
 
     .blog-card {
@@ -24,6 +29,8 @@
       transition: all 0.3s ease;
       position: relative;
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
     }
 
     .blog-card:hover {
@@ -55,12 +62,6 @@
       font-weight: 700;
     }
 
-    .blog-excerpt {
-      color: var(--cyber-text-secondary);
-      margin-bottom: 1.5rem;
-      line-height: 1.6;
-    }
-
     .blog-tags {
       display: flex;
       gap: 0.5rem;
@@ -76,6 +77,13 @@
       font-size: 0.8rem;
     }
 
+    .blog-excerpt {
+      color: var(--cyber-text-secondary);
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+      flex-grow: 1;
+    }
+
     .read-more {
       color: var(--cyber-accent);
       text-decoration: none;
@@ -84,6 +92,7 @@
       align-items: center;
       gap: 0.5rem;
       transition: all 0.3s ease;
+      margin-top: auto;
     }
 
     .read-more:hover {
@@ -94,11 +103,163 @@
       font-size: 0.8rem;
     }
 
+    .blog-header-section {
+      text-align: center;
+      margin-bottom: 3rem;
+      position: relative;
+      padding: 2rem 0;
+    }
+
+    .blog-header-section::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 150px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--cyber-accent), transparent);
+    }
+
+    .blog-subtitle {
+      color: var(--cyber-text-secondary);
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+
     @media (max-width: 768px) {
-      .blog-grid {
-        grid-template-columns: 1fr;
+      .blog-container {
         padding: 1rem;
       }
+      
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .training-section {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: var(--cyber-primary);
+      border: 1px solid var(--cyber-accent);
+      text-align: center;
+    }
+
+    .training-section h2 {
+      color: var(--cyber-text);
+      font-size: 1.5rem;
+      margin: 1.5rem 0 1rem;
+    }
+
+    .training-section strong {
+      color: var(--cyber-accent);
+    }
+
+    .training-section ul {
+      list-style-type: none;
+      padding-left: 1.5rem;
+      margin: 1rem auto;
+      display: inline-block;
+      text-align: left;
+      max-width: 600px;
+    }
+
+    .training-section li {
+      position: relative;
+      margin-bottom: 0.8rem;
+      color: var(--cyber-text);
+    }
+
+    .training-section ul li::before {
+      content: '>';
+      color: var(--cyber-accent);
+      position: absolute;
+      left: -1.5rem;
+    }
+
+    .training-section ul ul {
+      padding-left: 2rem;
+      margin: 0.5rem 0;
+      display: block;
+    }
+
+    .training-section ul ul li::before {
+      left: -1.5rem;
+    }
+
+    .training-section > ul > li {
+      margin-bottom: 1.5rem;
+      padding: 0.5rem;
+      border: 1px solid rgba(0, 255, 255, 0.1);
+      background: rgba(0, 255, 255, 0.05);
+    }
+
+    .prohibition-box {
+      background: rgba(255, 50, 50, 0.1);
+      border-left: 3px solid #ff3232;
+      padding: 1.5rem;
+      margin: 2rem auto;
+      position: relative;
+      max-width: 600px;
+      text-align: center;
+    }
+
+    .prohibition-box h2 {
+      color: #ff3232;
+      margin-top: 0;
+    }
+
+    .prohibition-box::before {
+      content: '!';
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      color: #ff3232;
+      font-size: 2rem;
+      font-weight: bold;
+      opacity: 0.5;
+    }
+
+    .schedule-box {
+      background: rgba(0, 255, 255, 0.05);
+      border: 1px solid var(--cyber-accent);
+      padding: 1.5rem;
+      margin: 2rem auto;
+      position: relative;
+      overflow: hidden;
+      max-width: 600px;
+      text-align: center;
+    }
+
+    .schedule-box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, var(--cyber-accent), transparent);
+    }
+
+    .schedule-box h2 {
+      display: inline-block;
+      background: var(--cyber-primary);
+      padding: 0.5rem 1rem;
+      margin-top: 0;
+      border: 1px solid var(--cyber-accent);
+      position: relative;
+    }
+
+    .schedule-box p {
+      color: var(--cyber-text);
+      margin: 1rem 0;
+    }
+
+    .prohibition-box ul, .prohibition-box ol,
+    .schedule-box ul, .schedule-box ol {
+      text-align: left;
+      margin: 1rem auto;
     }
   </style>
 </head>
@@ -115,13 +276,99 @@
     </header>
   </div>
 
+  <button class="cyber-button back-button" onclick="window.history.back()" style="margin: 2rem 0 0 2rem;"><i class="fas fa-arrow-left"></i> 戻る</button>
   <main class="cyber-main">
-    <section class="blog-section">
+    <section class="training-section">
+      <h2>最終目標</h2>
+      <p><strong>作成したSNSアカウントのフォロワーを300人増やす</strong></p>
+
+      <div class="prohibition-box">
+        <h2>禁止事項</h2>
+        <p>自分の手で作業することを禁ずる</p>
+      </div>
+
+      <div class="schedule-box">
+        <h2>スケジュール</h2>
+        <p>期間は5営業日</p>
+      </div>
+
+      <h2>内容</h2>
+      <ul>
+        <li><strong>ブランドを作る</strong>（自分自身、推し、専門知識から選択）
+          <ul>
+            <li>専門知識であれば、テーマはまったく知らないところに限定する</li>
+            <li>自分の知らない領域の初心者向けアカウント「ゆる〜〜系」など</li>
+          </ul>
+        </li>
+
+        <li><strong>AIを駆使しながら自力で</strong>ホームページを作る
+          <ul>
+            <li>ホームページは誰でも手元で見える状態であること</li>
+          </ul>
+        </li>
+
+        <li>SNSアカウントを作る
+          <ul>
+            <li>X、TikTok、Instagramなど</li>
+          </ul>
+        </li>
+
+        <li>SNS合計でフォロワー<strong>+300名</strong>を目指す
+          <ul>
+            <li>フォロワー増のためのコンテンツは全てAIを使って作成する
+              <ul>
+                <li>動画、バナー、ブログ記事など</li>
+              </ul>
+            </li>
+            <li>作成するコンテンツはAIを駆使して<strong>100個</strong>制作する</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <div class="blog-container">
+      <section class="blog-header-section">
+        <h1 class="blog-title">ブログ記事一覧</h1>
+        <p class="blog-subtitle">AI生成コンテンツの制作過程と実験結果をお届けします</p>
+      </section>
+
       <div class="blog-grid">
-        <!-- ブログ記事カード -->
         <article class="blog-card">
-          <div class="blog-date">2025.05.17</div>
-          <h2 class="blog-title">TikTokプロモーション実験：衝撃の結果報告</h2>
+          <h2 class="blog-title">#1 TikTokチャレンジ：AIだけで作るコンテンツの軌跡</h2>
+          <div class="blog-tags">
+            <span class="blog-tag">コンセプト</span>
+            <span class="blog-tag">TikTok</span>
+            <span class="blog-tag">AI</span>
+            <span class="blog-tag">活動記録</span>
+          </div>
+          <p class="blog-excerpt">
+            TikTok未経験からのチャレンジ。AIで作成していることを前面に押し出した
+            アカウント「ボットの日常」の5日間の軌跡。市場分析、コンテンツ制作の試行錯誤、
+            そしてAIならではの特徴を活かした戦略の確立まで、全ての記録を公開します。
+          </p>
+          <a href="blog-concept.html" class="read-more">
+            続きを読む <i class="fas fa-arrow-right"></i>
+          </a>
+        </article>
+
+        <article class="blog-card">
+          <h2 class="blog-title">#2 使用ツール：私のAIクリエイティブスタック</h2>
+          <div class="blog-tags">
+            <span class="blog-tag">ツール</span>
+            <span class="blog-tag">制作環境</span>
+          </div>
+          <p class="blog-excerpt">
+            動画生成は Sora、Google AI Studio、Canva を使い分け。
+            画像は ChatGPT、Canva、Sora、Image FX、Animate AI Pro で制作。
+            編集には CupCut を愛用しています。各ツールの特徴や使い分けについて解説します。
+          </p>
+          <a href="blog-ai-tools.html" class="read-more">
+            続きを読む <i class="fas fa-arrow-right"></i>
+          </a>
+        </article>
+
+        <article class="blog-card">
+          <h2 class="blog-title">#3 TikTokプロモーション実験：衝撃の結果報告</h2>
           <div class="blog-tags">
             <span class="blog-tag">TikTok</span>
             <span class="blog-tag">プロモーション</span>
@@ -140,41 +387,23 @@
         </article>
 
         <article class="blog-card">
-          <div class="blog-date">2025.05.16</div>
-          <h2 class="blog-title">AI動画分析：フォロワー数を伸ばすコツ</h2>
+          <h2 class="blog-title">#4 フォロワー数300人達成までの道のり：現状分析と予測</h2>
           <div class="blog-tags">
             <span class="blog-tag">分析</span>
-            <span class="blog-tag">戦略</span>
-            <span class="blog-tag">トレンド</span>
+            <span class="blog-tag">TikTok</span>
+            <span class="blog-tag">フォロワー</span>
           </div>
           <p class="blog-excerpt">
-            AI関連動画のトレンド分析から見えてきた法則：
-            単なる技術デモより、ストーリー性のある動画の方がフォロワーを獲得しやすい。
-            特に犬猫の料理動画やアニメーション動画が好調。コンセプトの一貫性も重要なポイントです。
+            5日間の活動で得られたフォロワー数の推移を分析。現状のペースでは37.5日、
+            プロモーションのみの場合は約43日（費用約20,600円）で目標達成の予測。
+            身内への宣伝解禁や各種プロモーションの効果も詳しく検証しています。
           </p>
-          <a href="#" class="read-more">
-            続きを読む <i class="fas fa-arrow-right"></i>
-          </a>
-        </article>
-
-        <article class="blog-card">
-          <div class="blog-date">2025.05.15</div>
-          <h2 class="blog-title">使用ツール：私のAIクリエイティブスタック</h2>
-          <div class="blog-tags">
-            <span class="blog-tag">ツール</span>
-            <span class="blog-tag">制作環境</span>
-          </div>
-          <p class="blog-excerpt">
-            動画生成は Sora、Google AI Studio、Canva を使い分け。
-            画像は ChatGPT、Canva、Sora、Image FX、Animate AI Pro で制作。
-            編集には CupCut を愛用しています。各ツールの特徴や使い分けについて解説します。
-          </p>
-          <a href="#" class="read-more">
+          <a href="blog-follower-analysis.html" class="read-more">
             続きを読む <i class="fas fa-arrow-right"></i>
           </a>
         </article>
       </div>
-    </section>
+    </div>
   </main>
 
   <footer class="cyber-footer">

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TikTokチャレンジ：AIだけで作るコンテンツの軌跡 - ボットの日常</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .blog-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .blog-header {
+      margin-bottom: 2rem;
+    }
+
+    .blog-date {
+      color: var(--cyber-accent);
+      font-family: 'Orbitron', sans-serif;
+      margin-bottom: 1rem;
+    }
+
+    .blog-title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--cyber-text);
+    }
+
+    .blog-tags {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .blog-tag {
+      background: var(--cyber-accent);
+      color: var(--cyber-primary);
+      padding: 0.2rem 0.8rem;
+      border-radius: 2px;
+      font-size: 0.8rem;
+    }
+
+    .blog-body {
+      color: var(--cyber-text);
+      line-height: 1.8;
+    }
+
+    .blog-section {
+      margin-bottom: 2rem;
+      background: var(--cyber-primary);
+      padding: 1.5rem;
+      border: 1px solid var(--cyber-accent);
+    }
+
+    .blog-section h2 {
+      color: var(--cyber-accent);
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .concept-box {
+      background: rgba(0, 255, 255, 0.1);
+      border-left: 3px solid var(--cyber-accent);
+      padding: 1.5rem;
+      margin: 1rem 0;
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .day-section {
+      background: rgba(0, 255, 255, 0.05);
+      border: 1px solid var(--cyber-accent);
+      padding: 1.5rem;
+      margin: 1rem 0;
+    }
+
+    .day-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--cyber-accent);
+    }
+
+    .day-title {
+      color: var(--cyber-accent);
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.2rem;
+    }
+
+    .activity-list {
+      list-style-type: none;
+      padding-left: 1.5rem;
+    }
+
+    .activity-list li {
+      position: relative;
+      margin-bottom: 0.8rem;
+    }
+
+    .activity-list li::before {
+      content: '>';
+      color: var(--cyber-accent);
+      position: absolute;
+      left: -1.5rem;
+    }
+
+    .insight-box {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--cyber-accent);
+      padding: 1rem;
+      margin: 0.5rem 0;
+      font-style: italic;
+    }
+
+    @media (max-width: 768px) {
+      .blog-content {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body class="cyberpunk-theme">
+  <div class="glitch-container">
+    <header class="cyber-header">
+      <h1 class="glitch-text" data-text="ボットの日常">ボットの日常</h1>
+      <p class="cyber-subtitle">製作過程や思考回路のログ</p>
+      <nav class="cyber-nav">
+        <a href="index.html" class="cyber-button"><i class="fas fa-home"></i> ホーム</a>
+        <a href="blog.html" class="cyber-button"><i class="fas fa-blog"></i> ブログ</a>
+        <a href="gallery.html" class="cyber-button"><i class="fas fa-video"></i> 動画ギャラリー</a>
+        <a href="image-gallery.html" class="cyber-button"><i class="fas fa-images"></i> 画像ギャラリー</a>
+      </nav>
+    </header>
+  </div>
+
+  <button class="cyber-button back-button" onclick="window.history.back()" style="margin: 2rem 0 0 2rem;"><i class="fas fa-arrow-left"></i> 戻る</button>
+  <main class="cyber-main">
+    <article class="blog-content">
+      <header class="blog-header">
+        <div class="blog-date">2025.05.15</div>
+        <h1 class="blog-title">TikTokチャレンジ：AIだけで作るコンテンツの軌跡</h1>
+        <div class="blog-tags">
+          <span class="blog-tag">コンセプト</span>
+          <span class="blog-tag">TikTok</span>
+          <span class="blog-tag">AI</span>
+          <span class="blog-tag">活動記録</span>
+        </div>
+      </header>
+
+      <div class="blog-body">
+        <section class="blog-section">
+          <h2>プロジェクトの背景</h2>
+          <p>
+            私にとってTikTokは完全な未知の領域。アプリを入れたことすらありませんでした。
+            そこでGeminiと市場分析を行い、投稿内容、投稿時間、ハッシュタグについてアドバイスを求めました。
+          </p>
+          <p>
+            分析を進める中で、TikTokでの成功には動画生成が必須であることが判明。
+            しかし、AI生成の動画には現状どうしてもAIっぽさが見え隠れしてしまう...
+          </p>
+          <div class="insight-box">
+            ならば、AIで作成していることを前面に押し出したアカウントを作ればいいのでは？
+          </div>
+        </section>
+
+        <section class="blog-section">
+          <h2>コンセプト</h2>
+          <div class="concept-box">
+            全てAI制作！ 生成AIで作ったコンテンツのみを投稿するアカウントです。
+          </div>
+        </section>
+
+        <section class="blog-section">
+          <h2>5日間の活動記録</h2>
+          
+          <div class="day-section">
+            <div class="day-header">
+              <div class="day-title">1日目</div>
+              <div>AIが運営してる感のあるアカウントを目指して</div>
+            </div>
+            <ul class="activity-list">
+              <li>アカウント名「ボットの日常」設定</li>
+              <li>ロボットの動画制作</li>
+              <li>Gemini、ChatGPTから提案された「AIが考えたあるある動画」制作</li>
+              <li>流行りの曲の歌詞をAIに入れて動画作成</li>
+              <li>休憩がてら上野動物園でパンダ見学</li>
+            </ul>
+          </div>
+
+          <div class="day-section">
+            <div class="day-header">
+              <div class="day-title">2日目</div>
+              <div>伸び悩みと新たな試み</div>
+            </div>
+            <ul class="activity-list">
+              <li>生成AI動画でバズっている動画を調査</li>
+              <li>猫動画の生成に挑戦（予想以上に難しい）</li>
+            </ul>
+          </div>
+
+          <div class="day-section">
+            <div class="day-header">
+              <div class="day-title">3日目</div>
+              <div>戦略の見直しと新発見</div>
+            </div>
+            <ul class="activity-list">
+              <li>市場調査から重要な発見：
+                <ul>
+                  <li>コンセプトの一貫性が重要</li>
+                  <li>AIのきれいな動画は「いいね」は多いがフォロワーは少ない</li>
+                  <li>ストーリー性のある動画の方がフォロワー獲得に効果的</li>
+                </ul>
+              </li>
+              <li>「AIが考えたあるある」シリーズの本格展開を決定</li>
+              <li>テンプレート作成による効率化を検討</li>
+              <li>「エッホエッホ」で息抜き</li>
+              <li>プロモート利用開始</li>
+            </ul>
+          </div>
+
+          <div class="day-section">
+            <div class="day-header">
+              <div class="day-title">4日目</div>
+              <div>新コンテンツの模索</div>
+            </div>
+            <ul class="activity-list">
+              <li>プロモート効果で視聴数増加、しかしフォロワーは伸び悩み</li>
+              <li>新たなトレンド分析：
+                <ul>
+                  <li>犬猫の料理動画の人気</li>
+                  <li>ストーリー性のあるアニメーション</li>
+                </ul>
+              </li>
+              <li>探偵猫のアニメ制作に挑戦（断念）</li>
+              <li>偶然から生まれた「○○でできた○○」シリーズ開始</li>
+              <li>2回目のプロモート開始</li>
+            </ul>
+          </div>
+
+          <div class="day-section">
+            <div class="day-header">
+              <div class="day-title">5日目</div>
+              <div>総仕上げ</div>
+            </div>
+            <ul class="activity-list">
+              <li>プロモート効果の分析</li>
+              <li>「○○でできた○○」シリーズの動画化</li>
+              <li>活動記録のまとめと資料作成</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </article>
+  </main>
+
+  <footer class="cyber-footer">
+    <div class="footer-content">
+      <p>&copy; 2025 ボットの日常</p>
+      <div class="cyber-social">
+        <a href="https://www.tiktok.com/@botnonichijou?is_from_webapp=1&sender_device=pc" class="cyber-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html> 

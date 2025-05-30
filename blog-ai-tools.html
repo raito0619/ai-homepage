@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI制作ツール総まとめ - ボットの日常</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .blog-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .blog-header {
+      margin-bottom: 2rem;
+    }
+
+    .blog-date {
+      color: var(--cyber-accent);
+      font-family: 'Orbitron', sans-serif;
+      margin-bottom: 1rem;
+    }
+
+    .blog-title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--cyber-text);
+    }
+
+    .blog-tags {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .blog-tag {
+      background: var(--cyber-accent);
+      color: var(--cyber-primary);
+      padding: 0.2rem 0.8rem;
+      border-radius: 2px;
+      font-size: 0.8rem;
+    }
+
+    .blog-body {
+      color: var(--cyber-text);
+      line-height: 1.8;
+    }
+
+    .blog-section {
+      margin-bottom: 2rem;
+      background: var(--cyber-primary);
+      padding: 1.5rem;
+      border: 1px solid var(--cyber-accent);
+    }
+
+    .blog-section h2 {
+      color: var(--cyber-accent);
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .blog-section h3 {
+      color: var(--cyber-text);
+      margin: 1rem 0;
+      font-size: 1.2rem;
+    }
+
+    .blog-section ul {
+      list-style-type: none;
+      padding-left: 1rem;
+    }
+
+    .blog-section li {
+      margin-bottom: 0.5rem;
+      position: relative;
+    }
+
+    .blog-section li::before {
+      content: '>';
+      color: var(--cyber-accent);
+      position: absolute;
+      left: -1rem;
+    }
+
+    .highlight-box {
+      background: rgba(0, 255, 255, 0.1);
+      border-left: 3px solid var(--cyber-accent);
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+
+    @media (max-width: 768px) {
+      .blog-content {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body class="cyberpunk-theme">
+  <div class="glitch-container">
+    <header class="cyber-header">
+      <h1 class="glitch-text" data-text="ボットの日常">ボットの日常</h1>
+      <p class="cyber-subtitle">製作過程や思考回路のログ</p>
+      <nav class="cyber-nav">
+        <a href="index.html" class="cyber-button"><i class="fas fa-home"></i> ホーム</a>
+        <a href="blog.html" class="cyber-button"><i class="fas fa-blog"></i> ブログ</a>
+        <a href="gallery.html" class="cyber-button"><i class="fas fa-video"></i> 動画ギャラリー</a>
+        <a href="image-gallery.html" class="cyber-button"><i class="fas fa-images"></i> 画像ギャラリー</a>
+      </nav>
+    </header>
+  </div>
+
+  <button class="cyber-button back-button" onclick="window.history.back()" style="margin: 2rem 0 0 2rem;"><i class="fas fa-arrow-left"></i> 戻る</button>
+  <main class="cyber-main">
+    <article class="blog-content">
+      <header class="blog-header">
+        <div class="blog-date">2025.05.15</div>
+        <h1 class="blog-title">AI制作ツール総まとめ：特徴と使い分け</h1>
+        <div class="blog-tags">
+          <span class="blog-tag">AI</span>
+          <span class="blog-tag">制作ツール</span>
+          <span class="blog-tag">レビュー</span>
+        </div>
+      </header>
+
+      <div class="blog-body">
+        <section class="blog-section">
+          <h2>動画生成</h2>
+          <div class="highlight-box">
+            <h3>Sora</h3>
+            <ul>
+              <li>proプランで無限の試行回数</li>
+              <li>重力感の把握が苦手</li>
+              <li>画像を手振れさせた動画だろ？ってたまに出力してくる</li>
+            </ul>
+          </div>
+
+          <div class="highlight-box" style="border-left-color: #64ffda;">
+            <h3>Google AI Studio</h3>
+            <ul>
+              <li>こちらの意図をわかってくれる選手権一位</li>
+              <li>無料だと試行回数がかなり制限される（体感高クオリティの動画だと日に5本が限界）</li>
+              <li>たまに周りのエフェクトを動かしてできたよーって見せてくる</li>
+            </ul>
+          </div>
+
+          <div class="highlight-box" style="border-left-color: #ff9e64;">
+            <h3>Canva</h3>
+            <ul>
+              <li>不思議な出力No.1</li>
+              <li>他とは全く違う結果を提示してきて面白い</li>
+              <li>素直な出力が多い</li>
+            </ul>
+          </div>
+
+          <div class="highlight-box" style="border-left-color: #bb9af7;">
+            <h3>Animate AI Pro</h3>
+          </div>
+        </section>
+
+        <section class="blog-section">
+          <h2>画像生成</h2>
+          <div class="highlight-box" style="border-left-color: #7dcfff;">
+            <h3>ChatGPT</h3>
+            <ul>
+              <li>言わずもがな</li>
+              <li>行間読みは天才</li>
+              <li>見切れた画像を出してくることが多い</li>
+            </ul>
+          </div>
+
+          <div class="highlight-box" style="border-left-color: #ff9e64;">
+            <h3>Canva</h3>
+            <ul>
+              <li>画像生成のほうは優秀</li>
+              <li>アニメっぽい出力が強い</li>
+            </ul>
+          </div>
+
+          <div class="highlight-box">
+            <h3>Sora</h3>
+            <ul>
+              <li>画像は崩壊してないものが多い印象</li>
+              <li>動かすとぼろが出る</li>
+            </ul>
+          </div>
+
+          <div class="highlight-box" style="border-left-color: #f7768e;">
+            <h3>Image FX</h3>
+            <ul>
+              <li>生成が早い、無料、4種類の生成をだしてくる</li>
+              <li>とても優秀</li>
+              <li>ギャラリーで過去のものもみれる、画像生成は最強かも</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="blog-section">
+          <h2>動画編集</h2>
+          <div class="highlight-box" style="border-left-color: #2ac3de;">
+            <h3>CupCut</h3>
+            <ul>
+              <li>ブラウザで動く動画編集ツールとしてはこれなのかなの気持ち</li>
+              <li>使いなれてるのも大きい</li>
+            </ul>
+          </div>
+
+          <div class="highlight-box" style="border-left-color: #73daca;">
+            <h3>TikTok</h3>
+            <p>ブラウザとアプリでできることが違うのに注意</p>
+            <h4>ブラウザ</h4>
+            <ul>
+              <li>動画投稿のみ</li>
+              <li>音源の付与〇</li>
+              <li>文字入れ×</li>
+              <li>テンプレは数が少なくしょぼめ</li>
+              <li>予約投稿ができる</li>
+            </ul>
+            <h4>アプリ</h4>
+            <ul>
+              <li>動画・画像どちらの投稿もできる</li>
+              <li>テンプレが豊富</li>
+              <li>音源編集がしやすい</li>
+              <li>流行りの音源が見つけやすい</li>
+              <li>予約投稿ができない</li>
+            </ul>
+            <p>結論：なにかと、スマホのほうが便利　ただし予約投稿はできない</p>
+          </div>
+        </section>
+      </div>
+    </article>
+  </main>
+
+  <footer class="cyber-footer">
+    <div class="footer-content">
+      <p>&copy; 2025 ボットの日常</p>
+      <div class="cyber-social">
+        <a href="https://www.tiktok.com/@botnonichijou?is_from_webapp=1&sender_device=pc" class="cyber-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html> 

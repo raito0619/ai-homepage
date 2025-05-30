@@ -20,12 +20,6 @@
       margin-bottom: 2rem;
     }
 
-    .blog-date {
-      color: var(--cyber-accent);
-      font-family: 'Orbitron', sans-serif;
-      margin-bottom: 1rem;
-    }
-
     .blog-title {
       font-size: 2rem;
       margin-bottom: 1rem;
@@ -70,28 +64,43 @@
       font-size: 1.2rem;
     }
 
-    .blog-section ul {
-      list-style-type: none;
-      padding-left: 1rem;
-    }
-
-    .blog-section li {
-      margin-bottom: 0.5rem;
-      position: relative;
-    }
-
-    .blog-section li::before {
-      content: '>';
-      color: var(--cyber-accent);
-      position: absolute;
-      left: -1rem;
-    }
-
     .highlight-box {
       background: rgba(0, 255, 255, 0.1);
       border-left: 3px solid var(--cyber-accent);
       padding: 1rem;
       margin: 1rem 0;
+    }
+
+    .data-box {
+      background: rgba(0, 255, 255, 0.05);
+      border: 1px solid var(--cyber-accent);
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+
+    .stat-item {
+      background: var(--cyber-primary);
+      padding: 1rem;
+      border: 1px solid var(--cyber-accent);
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: 1.5rem;
+      color: var(--cyber-accent);
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .stat-label {
+      font-size: 0.9rem;
+      color: var(--cyber-text-secondary);
     }
 
     @media (max-width: 768px) {
@@ -115,11 +124,11 @@
     </header>
   </div>
 
+  <button class="cyber-button back-button" onclick="window.history.back()" style="margin: 2rem 0 0 2rem;"><i class="fas fa-arrow-left"></i> 戻る</button>
   <main class="cyber-main">
     <article class="blog-content">
       <header class="blog-header">
-        <div class="blog-date">2025.05.17</div>
-        <h1 class="blog-title">TikTokプロモーション実験：衝撃の結果報告</h1>
+        <h1 class="blog-title">#3 TikTokプロモーション実験：衝撃の結果報告</h1>
         <div class="blog-tags">
           <span class="blog-tag">TikTok</span>
           <span class="blog-tag">プロモーション</span>
@@ -129,63 +138,114 @@
 
       <div class="blog-body">
         <section class="blog-section">
-          <h2>前提：AI生成ラベルの衝撃</h2>
+          <h2>前提：衝撃の事実</h2>
           <div class="highlight-box">
-            <p>TikTokにはAI生成ラベルが存在し、AI生成コンテンツにはこのラベルの付与が必須。
-            このラベルなしではプロモーションの審査すら通過できないという衝撃の事実が判明。</p>
+            <p>TikTokにはAI生成ラベルたるものがあり、AI生成のコンテンツに関してはこのラベルを付けないとそもそもプロモートの審査が通らない</p>
+            <p>これまで投稿してきたものはすべて非公開にして、厳選したものをAI生成タグをつけて再投稿しました…</p>
+            <p>教えてくれよChatGPT、Gemini…</p>
           </div>
-          <p>この発見により、これまで投稿してきた全コンテンツを一旦非公開にし、
-          厳選したものにAI生成タグを付けて再投稿することになりました。</p>
         </section>
 
         <section class="blog-section">
-          <h2>プロモーション実験の詳細</h2>
-          <h3>選択したプラン</h3>
-          <ul>
-            <li>最上位プラン選択</li>
-            <li>謳われた効果：1日で300～2600人のフォロワー増加</li>
-            <li>開始：13日20時頃</li>
-          </ul>
+          <h2>プロモート一回目：フォロワー数増加実験</h2>
+          
+          <h3>申し込んだプラン</h3>
+          <div class="data-box">
+            <p>一番上のプラン選択</p>
+            <p>謳い文句：一日でフォロワー数が300～2600人増加</p>
+            <p>開始：13日20時頃</p>
+          </div>
 
-          <h3>14時間経過時点の結果</h3>
-          <ul>
-            <li>視聴数：252</li>
-            <li>新規フォロワー数：3</li>
-          </ul>
+          <h3>14時間後の結果（14日10時時点）</h3>
+          <div class="stats">
+            <div class="stat-item">
+              <div class="stat-value">252</div>
+              <div class="stat-label">視聴数</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">3</div>
+              <div class="stat-label">新規フォロワー</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">1.32秒</div>
+              <div class="stat-label">平均視聴時間</div>
+            </div>
+          </div>
 
           <h3>最終結果</h3>
-          <ul>
-            <li>視聴数：394</li>
-            <li>新規フォロワー数：7</li>
-            <li>コスト効率：480円÷7人=68.57円/人</li>
-          </ul>
-        </section>
+          <div class="stats">
+            <div class="stat-item">
+              <div class="stat-value">394</div>
+              <div class="stat-label">視聴数</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">7</div>
+              <div class="stat-label">新規フォロワー</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">¥68.57</div>
+              <div class="stat-label">フォロワー獲得単価</div>
+            </div>
+          </div>
 
-        <section class="blog-section">
-          <h2>重要な発見</h2>
-          <h3>視聴傾向</h3>
-          <ul>
-            <li>ゴールデンタイム：22時～24時に視聴数が増加</li>
-            <li>平均視聴時間：1.32秒（ほとんどの視聴者が飛ばし視聴）</li>
-            <li>プロモート終了後の視聴数の急激な減少</li>
-          </ul>
-
-          <h3>視聴者層の意外な発見</h3>
-          <ul>
-            <li>予想以上に幅広い年齢層が視聴</li>
-            <li>TikTokの印象（10代中心）と実際の視聴者層の差</li>
-            <li>男性視聴者の予想以上の多さ</li>
-          </ul>
-        </section>
-
-        <section class="blog-section">
-          <h2>結論</h2>
           <div class="highlight-box">
+            <h3>分かったこと・思ったこと</h3>
             <ul>
-              <li>謳われた「300人以上のフォロワー増」は現実的ではない</li>
-              <li>プロモーション効果は一時的</li>
-              <li>視聴者層の発見は今後のコンテンツ戦略に活用可能</li>
-              <li>投稿のタイミングは22-24時が最適</li>
+              <li>22時～24時が視聴のゴールデンタイム</li>
+              <li>300人以上という謳い文句は明らかな誇大広告</li>
+              <li>プロモート終了後の視聴数の落ち込みが激しい</li>
+              <li>予想以上に幅広い年齢層の視聴者</li>
+              <li>意外と男性視聴者が多い</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="blog-section">
+          <h2>プロモート二回目：視聴数増加実験</h2>
+          
+          <h3>申し込んだプラン</h3>
+          <div class="data-box">
+            <p>比較のため視聴数プロモートに切り替え</p>
+            <p>一番上のプラン選択</p>
+            <p>開始：14日19時頃</p>
+          </div>
+
+          <h3>15時間後の結果（15日10時時点）</h3>
+          <div class="stats">
+            <div class="stat-item">
+              <div class="stat-value">716</div>
+              <div class="stat-label">視聴数</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">0</div>
+              <div class="stat-label">新規フォロワー</div>
+            </div>
+          </div>
+
+          <h3>最終結果（15日17時時点）</h3>
+          <div class="stats">
+            <div class="stat-item">
+              <div class="stat-value">962</div>
+              <div class="stat-label">視聴数</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">88</div>
+              <div class="stat-label">いいね数</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">0</div>
+              <div class="stat-label">新規フォロワー</div>
+            </div>
+          </div>
+
+          <div class="highlight-box">
+            <h3>分かったこと・思ったこと</h3>
+            <ul>
+              <li>フォロワー数プロモートと比べて視聴数の伸びが顕著</li>
+              <li>プロモート画面とインサイトで視聴数に差異あり</li>
+              <li>ピークタイムは依然として日付変更時頃</li>
+              <li>いいね数は予想以上に好調</li>
+              <li>視聴数増加がフォロワー獲得に直結しないのは興味深い</li>
             </ul>
           </div>
         </section>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TikTokプロモーション分析 - ボットの日常</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .blog-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .blog-header {
+      margin-bottom: 2rem;
+    }
+
+    .blog-date {
+      color: var(--cyber-accent);
+      font-family: 'Orbitron', sans-serif;
+      margin-bottom: 1rem;
+    }
+
+    .blog-title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--cyber-text);
+    }
+
+    .blog-tags {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .blog-tag {
+      background: var(--cyber-accent);
+      color: var(--cyber-primary);
+      padding: 0.2rem 0.8rem;
+      border-radius: 2px;
+      font-size: 0.8rem;
+    }
+
+    .blog-body {
+      color: var(--cyber-text);
+      line-height: 1.8;
+    }
+
+    .blog-section {
+      margin-bottom: 2rem;
+      background: var(--cyber-primary);
+      padding: 1.5rem;
+      border: 1px solid var(--cyber-accent);
+    }
+
+    .blog-section h2 {
+      color: var(--cyber-accent);
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .blog-section h3 {
+      color: var(--cyber-text);
+      margin: 1rem 0;
+      font-size: 1.2rem;
+    }
+
+    .blog-section ul {
+      list-style-type: none;
+      padding-left: 1rem;
+    }
+
+    .blog-section li {
+      margin-bottom: 0.5rem;
+      position: relative;
+    }
+
+    .blog-section li::before {
+      content: '>';
+      color: var(--cyber-accent);
+      position: absolute;
+      left: -1rem;
+    }
+
+    .highlight-box {
+      background: rgba(0, 255, 255, 0.1);
+      border-left: 3px solid var(--cyber-accent);
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+
+    .stats-box {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+
+    .stat-item {
+      background: rgba(0, 255, 255, 0.05);
+      padding: 1rem;
+      border: 1px solid var(--cyber-accent);
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: 2rem;
+      color: var(--cyber-accent);
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .stat-label {
+      font-size: 0.9rem;
+      color: var(--cyber-text);
+      margin-top: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .blog-content {
+        padding: 1rem;
+      }
+      
+      .stats-box {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body class="cyberpunk-theme">
+  <div class="glitch-container">
+    <header class="cyber-header">
+      <h1 class="glitch-text" data-text="ボットの日常">ボットの日常</h1>
+      <p class="cyber-subtitle">製作過程や思考回路のログ</p>
+      <nav class="cyber-nav">
+        <a href="index.html" class="cyber-button"><i class="fas fa-home"></i> ホーム</a>
+        <a href="blog.html" class="cyber-button"><i class="fas fa-blog"></i> ブログ</a>
+        <a href="gallery.html" class="cyber-button"><i class="fas fa-video"></i> 動画ギャラリー</a>
+        <a href="image-gallery.html" class="cyber-button"><i class="fas fa-images"></i> 画像ギャラリー</a>
+      </nav>
+    </header>
+  </div>
+
+  <main class="cyber-main">
+    <article class="blog-content">
+      <header class="blog-header">
+        <div class="blog-date">2025.05.15</div>
+        <h1 class="blog-title">TikTokプロモーション効果分析：視聴数とフォロワー数の比較</h1>
+        <div class="blog-tags">
+          <span class="blog-tag">TikTok</span>
+          <span class="blog-tag">プロモーション</span>
+          <span class="blog-tag">分析</span>
+        </div>
+      </header>
+
+      <div class="blog-body">
+        <section class="blog-section">
+          <h2>プロモーション設定</h2>
+          <div class="highlight-box">
+            <h3>プロモーション詳細</h3>
+            <ul>
+              <li>2回目のプロモーション実施</li>
+              <li>1回目：フォロワー数増加を目標に設定</li>
+              <li>2回目：視聴数増加を目標に設定</li>
+              <li>最上位プランを選択</li>
+              <li>開始時刻：5月14日19時頃</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="blog-section">
+          <h2>中間結果（15時間経過時点）</h2>
+          <div class="stats-box">
+            <div class="stat-item">
+              <div class="stat-value">716</div>
+              <div class="stat-label">視聴数</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">0</div>
+              <div class="stat-label">フォロワー増加数</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="blog-section">
+          <h2>分析と考察</h2>
+          <div class="highlight-box">
+            <h3>主な発見</h3>
+            <ul>
+              <li>フォロワー数プロモーションと比較して、視聴数の伸びが顕著</li>
+              <li>プロモーション画面の視聴数とインサイトの視聴数に差異あり</li>
+              <li>視聴のピーク時間帯は日付変更時期付近</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </article>
+  </main>
+
+  <footer class="cyber-footer">
+    <div class="footer-content">
+      <p>&copy; 2025 ボットの日常</p>
+      <div class="cyber-social">
+        <a href="https://www.tiktok.com/@botnonichijou?is_from_webapp=1&sender_device=pc" class="cyber-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html> 
